@@ -59,47 +59,31 @@ set foldlevel=1
 
 "          Expecial plugins configurations
 
-let g:neocomplcache_enable_at_startup = 1
-let g:used_javascript_libs = 'jquery,underscore,backbone,prelude,angularjs,requirejs,sugar'
-let NERDTreeShowHidden=1
-let g:tagbar_usearrows = 1
+let g:NERDCompactSexyComs = 1
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 let g:airline_powerline_fonts = 1
+let g:used_javascript_libs = 'jquery,underscore,backbone,prelude,angularjs,requirejs,sugar'
+let g:tagbar_usearrows = 1
 
 "          Expecial plugins configurations
 
 "          Shotcuts
 
+map <leader>Q :only<CR>
 map <leader>q :q!<CR>
 map <leader>w :w!<CR>
 map <leader>wq :wq<CR>
 imap jj <ESC>:w!<CR>
 imap jja <ESC>A;<ESC>o
 
-map <F2> :let NERDTreeWinPos = "left"<ESC>:NERDTreeToggle<RETURN>
-map <F3> :let NERDTreeWinPos = "right"<ESC>:NERDTreeToggle<RETURN>
-map <F4> :TagbarToggle<CR>
 set pastetoggle=<leader>p
 noremap <leader>m :call <SID>ToggleMouse()<CR>
 inoremap <leader>m <Esc>:call <SID>ToggleMouse()<CR>a
-noremap <Leader>r <C-^>
-
-map <C-a> ggVG
-map <leader>a VG
-
-noremap <Leader>v :vsplit
-noremap <Leader>h :split
-map <leader>Q :only<CR>
-
-map <leader>es :set spell spelllang=es_MX<CR>
-map <leader>en :set spell spelllang=en_us<CR>
-map <leader>n ]s
+inoremap <Leader>h <Esc>:split
 
 map <leader>e :Errors<CR>
 map <leader>gs :Gstatus<CR>
-map <leader>b :!bundle install<CR>
-map <leader>ra :!rake db:create db:migrate db:test:prepare
-map <leader>rm :!rake db:migrate
-map <leader>t :!rspec
 
 "          Shotcuts
 
@@ -123,12 +107,3 @@ fun! s:ToggleMouse()
 endfunction
 
 "          Metods
-
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"⭤":""}',
-      \ },
-      \ 'separator': { 'left': '⮀', 'right': '⮂' },
-      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
-      \ }
