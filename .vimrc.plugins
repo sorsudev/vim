@@ -1,9 +1,13 @@
 call plug#begin('~/.vim/plugins')
-  Plug 'KeitaNakamura/neodark.vim'
+  Plug 'morhetz/gruvbox'
   Plug 'Valloric/YouCompleteMe'
   Plug 'scrooloose/nerdcommenter'
   Plug 'wincent/command-t'
   Plug 'mattn/emmet-vim'
   Plug 'tpope/vim-fugitive'
   Plug 'vim-airline/vim-airline'
+  Plug 'jelera/vim-javascript-syntax'
+  Plug 'pangloss/vim-javascript'
+  Plug 'scrooloose/syntastic'
+  Plug 'marijnh/tern_for_vim'
 call plug#end()

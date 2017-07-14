@@ -13,10 +13,8 @@ set t_Co=256
 set lines=80 columns=100
 set directory=~/.vim/tmp/swap
 set backupdir=~/.vim/tmp/backup
-color neodark
-let g:neodark#use_256color = 1
-let g:neodark#terminal_transparent = 1
-let g:neodark#solid_vertsplit = 1
+set background=dark
+color gruvbox
 
 let mapleader = ","
 set mouse=a
@@ -62,9 +60,10 @@ set foldlevel=1
 let g:NERDCompactSexyComs = 1
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-let g:airline_powerline_fonts = 1
-let g:used_javascript_libs = 'jquery,underscore,backbone,prelude,angularjs,requirejs,sugar'
-let g:tagbar_usearrows = 1
+let g:syntastic_check_on_open=1
+let g:ycm_add_preview_to_completeopt=0
+let g:ycm_confirm_extra_conf=0
+set completeopt-=preview
 
 "          Expecial plugins configurations
 

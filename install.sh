@@ -17,7 +17,8 @@ sh nvm_install.sh
 . ~/.profile
 . ~/.bashrc
 nvm install node -v
-nvm use node
+nvm alias default node
+nvm use alias
 npm install -g jshint
 
 rm nvm_install.sh
