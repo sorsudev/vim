@@ -10,8 +10,8 @@ mkdir $Directory/backup
 
 #plugins
 sudo apt-get update
-sudo apt-get install build-essential libssl-dev vim-nox -y
-curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh > nvm_install.sh
+sudo apt-get install build-essential python-dev python3-dev libssl-dev vim-nox -y
+curl https://raw.githubusercontent.com/creationix/nvm/v0.33.4/install.sh > nvm_install.sh
 sh nvm_install.sh
 . ~/.nvm/nvm.sh
 . ~/.profile
@@ -35,10 +35,6 @@ cd ./plugins/command-t/ruby/command-t/ext/command-t
 rbenv install 2.3.1 -v
 rbenv local 2.3.1
 ruby extconf.rb && make
-
-cd $CurrentDirectory
-cd ./plugins/YouCompleteMe
-./install.py --tern-completer
 
 cd $CurrentDirectory
 

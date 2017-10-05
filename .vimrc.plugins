@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugins')
   Plug 'morhetz/gruvbox'
-  Plug 'Valloric/YouCompleteMe'
+  Plug 'airblade/vim-gitgutter'
   Plug 'scrooloose/nerdcommenter'
   Plug 'wincent/command-t'
   Plug 'mattn/emmet-vim'
