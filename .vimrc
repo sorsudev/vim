@@ -31,8 +31,8 @@ set ai
 set si
 set wrap
 set autoindent
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set smartindent
 
 "          Text distribution
@@ -83,6 +83,20 @@ inoremap <Leader>h <Esc>:split
 
 map <leader>e :Errors<CR>
 map <leader>gs :Gstatus<CR>
+
+if &diff
+  map <leader>1 :diffget LOCAL<CR>
+  map <leader>2 :diffget BASE<CR>
+  map <leader>3 :diffget REMOTE<CR>
+endif
+
+:set number relativenumber
+
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
 
 "          Shotcuts
 
