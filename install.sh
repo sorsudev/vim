@@ -9,19 +9,10 @@ mkdir $Directory/swap
 mkdir $Directory/backup
 
 #plugins
+sudo add-apt-repository ppa:jonathonf/vim
 sudo apt-get update
-sudo apt-get install build-essential python-dev python3-dev libssl-dev vim-nox -y
-curl https://raw.githubusercontent.com/creationix/nvm/v0.33.4/install.sh > nvm_install.sh
-sh nvm_install.sh
-. ~/.nvm/nvm.sh
-. ~/.profile
-. ~/.bashrc
-nvm install node -v
-nvm alias default node
-nvm use alias
+sudo apt-get install build-essential python-dev python3-dev libssl-dev gcc-6 vim-nox -y
 npm install -g jshint
-
-rm nvm_install.sh
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -32,8 +23,8 @@ cp .vimrc.plugins ~/
 vim +PlugUpdate +qall
 
 cd ./plugins/command-t/ruby/command-t/ext/command-t
-rbenv install 2.3.1 -v
-rbenv local 2.3.1
+CC=/usr/bin/gcc-6 rbenv install 2.3.3 -v
+rbenv local 2.3.3
 ruby extconf.rb && make
 
 cd $CurrentDirectory

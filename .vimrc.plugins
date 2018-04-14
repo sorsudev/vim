@@ -10,4 +10,7 @@ call plug#begin('~/.vim/plugins')
   Plug 'pangloss/vim-javascript'
   Plug 'scrooloose/syntastic'
   Plug 'marijnh/tern_for_vim'
+  Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
+  Plug 'maralla/completor.vim'
 call plug#end()
