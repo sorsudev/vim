@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugins')
   Plug 'airblade/vim-gitgutter'
   Plug 'scrooloose/nerdcommenter'
   Plug 'mattn/emmet-vim'
+  Plug 'wincent/command-t'
   Plug 'tpope/vim-fugitive'
   Plug 'vim-airline/vim-airline'
   Plug 'jelera/vim-javascript-syntax'
